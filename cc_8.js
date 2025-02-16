@@ -39,14 +39,14 @@ console.log(calculateServiceFee(500, "Standard")); // Expected output: "Service 
 // task 4 Car rental Cost calculation
 
 function calculateRentalCost(days, carType, insurance = false) {
-    const rates = {
+    let carRates = {
         "Economy": 40,
         "Standard": 60,
         "Luxury": 100
     };
 
-    if (carType in rates) {
-        let totalCost = days * rates[carType];
+    if (carType in carRates) {
+        let totalCost = days * carRates[carType];
 
         if (insurance) {
             totalCost += days * 20;
@@ -58,5 +58,19 @@ function calculateRentalCost(days, carType, insurance = false) {
     return "Invalid car type";
 }
 
-calculateRentalCost(3, "Economy", true); // Expected output: "Total Rental Cost: $180"
-calculateRentalCost(5, "Luxury", false); // Expected output: "Total Rental Cost: $500"
+
+console.log(calculateRentalCost(3, "Economy", true));  // output should be $180
+console.log(calculateRentalCost(5, "Luxury", false));  // output should be $500
+
+//Task 5 Loan Payment Calculation
+function calculateLoanPayment(principal,rate,time) {
+    let totalpayment = principal + (principal * rate * time);
+    console.log(`Expected output: $${totalpayment}`)
+};
+
+calculateLoanPayment(1000,0.05,2);// the output should be $1100
+calculateLoanPayment(5000,0.07,3);// the output should be $6050
+
+
+
+
