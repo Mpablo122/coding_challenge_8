@@ -5,8 +5,8 @@ function caculateSalary(baseSalary, bonus, taxrate) {
     console.log(`Net Salary: $${netSalary}`)
 };
 
-caculateSalary(5000,500,0.1); //final output should be
-caculateSalary(7000,1000,0.15); //final output should be
+caculateSalary(5000,500,0.1); //final output should be $5000
+caculateSalary(7000,1000,0.15); //final output should be $6950
 
 //task 2 product price after discount
 
@@ -33,8 +33,8 @@ let calculateServiceFee = (amount, serviceType) => {
     return "Invalid Service type"
 };
 
-console.log(calculateServiceFee(200, "Premium"));  // Expected output: "Service Fee: $30.00"
-console.log(calculateServiceFee(500, "Standard")); // Expected output: "Service Fee: $50.00"
+console.log(calculateServiceFee(200, "Premium"));  //output should be : "Service Fee: $30.00"
+console.log(calculateServiceFee(500, "Standard")); //output should be : "Service Fee: $50.00"
 
 // task 4 Car rental Cost calculation
 
