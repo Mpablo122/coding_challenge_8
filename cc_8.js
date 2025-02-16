@@ -71,6 +71,25 @@ function calculateLoanPayment(principal,rate,time) {
 calculateLoanPayment(1000,0.05,2);// the output should be $1100
 calculateLoanPayment(5000,0.07,3);// the output should be $6050
 
+//Task 6 - identifying Large transactions 
+let transactions = [200,1500,3200,800,2500];
 
+function filterLargeTransactions(transactions,filterFunction) {
+    return transactions.filter(filterFunction);
+}
 
+console.log(filterLargeTransactions(transactions,amount => amount > 1000))
+//output should be [1500,3200,2500]
+
+function createCartTracker() {
+    let total = 0
+    return function (itemPrice){
+        total+= itemPrice;
+        return `Total Cart Value: $${total}`
+    };
+    
+}
+let cart = createCartTracker();
+console.log(cart(20)); // output should be $20
+console.log(cart(35)); // output should be $55
 
