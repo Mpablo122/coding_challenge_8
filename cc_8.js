@@ -81,6 +81,7 @@ function filterLargeTransactions(transactions,filterFunction) {
 console.log(filterLargeTransactions(transactions,amount => amount > 1000))
 //output should be [1500,3200,2500]
 
+//Task 7  Shopping Cart Tracker
 function createCartTracker() {
     let total = 0
     return function (itemPrice){
