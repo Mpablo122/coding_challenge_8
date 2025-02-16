@@ -94,3 +94,14 @@ let cart = createCartTracker();
 console.log(cart(20)); // output should be $20
 console.log(cart(35)); // output should be $55
 
+// "Task 8 - Savings Growth projection"
+function calculateSavings(years, amount) {
+    if (years>=10){
+        return `Projected Savings: $${amount.toFixed(2)}`;
+    }
+    amount *= 1.05;
+    return calculateSavings(years + 1, amount);
+}
+
+console.log (calculateSavings(8,1000)); // output should be $1102
+console.log(calculateSavings(5,5000));// output should be $6381
