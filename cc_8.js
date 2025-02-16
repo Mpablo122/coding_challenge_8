@@ -17,3 +17,22 @@ function calculateDiscount(price, discountRate) {
 
 calculateDiscount(100,0.2); // final output should be 80.00
 calculateDiscount(250,0.15); // final output should be $212.50
+
+
+//task 3 - Service fee calculation 
+
+let calculateServiceFee = (amount, serviceType) => {
+    let servicefees ={
+        "Premium": 0.15,
+        "Standard": 0.10,
+        "Basic": 0.05
+    };
+    if (serviceType in servicefees){
+        return `Service fee: $${(amount * servicefees[serviceType]).toFixed(2)}`;
+    }
+    return "Invalid Service type"
+};
+
+console.log(calculateServiceFee(200, "Premium"));  // Expected output: "Service Fee: $30.00"
+console.log(calculateServiceFee(500, "Standard")); // Expected output: "Service Fee: $50.00"
+
